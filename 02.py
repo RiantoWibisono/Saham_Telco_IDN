@@ -40,12 +40,13 @@ plt.plot(
     df4['2019-04'].index, df4['2019-04']['Close'], 'r'
 )
 
-plt.title('Harga Historis Saham Provider Telco Indonesia', fontsize = 15, fontweight="bold")
+plt.suptitle('Harga Historis Saham Provider Telco Indonesia (April 2019)', fontsize = 15, fontweight="bold")
 plt.xlabel('Tanggal')
 plt.ylabel('Rupiah (IDR)')
 plt.grid(True)
-plt.legend(['PT XL Axiata Tbk', 'PT Smartfren Telecom Tbk', 'PT Indosat Tbk', 'PT Telekomunikasi Indonesia Tbk'], loc= 'upper center', ncol = 4, fontsize = 7)
-plt.xticks(df1['2019-04'].index[::1], rotation = 60)
+label = ['PT XL Axiata Tbk', 'PT Smartfren Telecom Tbk', 'PT Indosat Tbk', 'PT Telekomunikasi Indonesia Tbk']
+plt.legend(label, loc = 'upper center', bbox_to_anchor = (0.5, 1.08), ncol = 4, frameon = False, fontsize = 8)
+plt.xticks(rotation = 60)
 
 plt.subplots_adjust(bottom=.2)
 
