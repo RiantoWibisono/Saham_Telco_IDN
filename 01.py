@@ -26,13 +26,6 @@ df4 = pd.read_csv(
     index_col = False,
     parse_dates=['Date']
 )
-# dftanggal = pd.read_csv(
-#     './saham/TLKM.JK.csv', 
-#     index_col = False
-# )
-# tanggal = []
-# for i in dftanggal['Date']:
-#     tanggal.append(str(i))
 
 df1 = df1.set_index('Date') 
 df2 = df2.set_index('Date') 
